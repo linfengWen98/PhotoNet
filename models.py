@@ -435,14 +435,6 @@ class NASDecoder(nn.Module):
     def __init__(self):
         super(NASDecoder, self).__init__()
 
-        # d0_control: transfer, skip1, skip2, skip3, skip4
-        # d1_control: transfer, conv15, conv16
-        # d2_control: transfer, IN, skip+conv17, conv18, conv19, conv20, transfer
-        # d3_control: transfer, IN, skip+conv21, conv22, conv23, conv24, transfer
-        # d4_control: transfer, IN, skip+conv25, conv26, transfer
-        # d5_control: transfer, IN, skip+conv27, transfer
-        # decoder
-
         self.IN4 = nn.InstanceNorm2d(512)
         self.IN3 = nn.InstanceNorm2d(256)
         self.IN2 = nn.InstanceNorm2d(128)
