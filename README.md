@@ -9,15 +9,15 @@ pretrained models [here](https://drive.google.com/drive/folders/1HcwaTBBcooB36uW
 
 * train the model
 ```bash
-python train.py --dataset 'dir to images'
+python train.py --model PhotoNet --dataset 'dir to images'
 ```
 
 * image reconstruction and compare
 ```bash
-python reconstruction.py --image ./content/1.jpg
+python reconstruction.py --model PhotoNet --image ./content/1.jpg
 ```
 
 * style transfer
 ```bash
-python transfer.py --content ./content/1.jpg --style ./style/1.jpg --output ./out/1.jpg
+python transfer.py --model PhotoNet --content ./content/1.jpg --style ./style/1.jpg --output ./out/1.jpg
 ```
