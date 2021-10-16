@@ -60,7 +60,7 @@ def train(args):
     encoder = VGGEncoder()
     encoder.load_state_dict(torch.load(args.encoder_path))
     for param in encoder.parameters():
-        param.require_grad = False
+        param.requires_grad = False
     encoder.eval()
 
     if args.model == 'PhotoNet':
